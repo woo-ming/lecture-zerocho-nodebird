@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Head from "next/head";
-
+import wrapper from "../store/configureStore";
 const NodeBird = ({ Component }) => {
   return (
     <>
@@ -17,4 +17,4 @@ NodeBird.PropTypes = {
   Component: PropTypes.elementType.isRequired,
 };
 
-export default NodeBird;
+export default wrapper.withRedux(NodeBird);
